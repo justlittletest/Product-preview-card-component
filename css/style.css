@@ -1,0 +1,135 @@
+*,
+*::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background-color: rgb(242, 235, 227);
+  max-width: 1200px;
+  width: 100%;
+}
+
+.text {
+  opacity: 0.4;
+  font-size: 1.3rem;
+}
+
+.box-img {
+  width: 100%;
+}
+
+.box-price {
+  display: flex;
+  margin: 2rem 0;
+  align-items: center;
+}
+
+.box-perfume {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.box-perfume__img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.box-perfume__img-desktop {
+  display: none;
+}
+.box-perfume__box-perfume-info {
+  padding: 2rem;
+}
+.box-perfume__product-category {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.box-perfume__product-name {
+  font-family: "Fraunces", serif;
+  margin: 1rem 0;
+}
+.box-perfume__product-info {
+  line-height: 2.2rem;
+}
+.box-perfume__price {
+  margin-right: 2rem;
+  font-size: 2.8rem;
+  font-family: "Fraunces", serif;
+  color: rgb(60, 128, 103);
+  font-weight: 700;
+}
+.box-perfume__btn {
+  padding: 1.5rem;
+  width: 100%;
+  background-color: rgb(60, 128, 103);
+  color: rgb(255, 255, 255);
+  border-radius: 1rem;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s background-color;
+}
+.box-perfume__btn img {
+  position: relative;
+  top: 3px;
+  right: 5px;
+}
+.box-perfume__btn:hover {
+  background-color: rgb(36, 63, 50);
+}
+
+@media (min-width: 992px) {
+  .wrapper {
+    height: 100vh;
+  }
+  .box-perfume {
+    flex-direction: row;
+    max-width: 600px;
+  }
+  .box-perfume__img {
+    display: none;
+    width: 100%;
+    max-width: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .box-perfume__img-desktop {
+    display: block;
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .box-perfume__box-perfume-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+    padding: 3rem;
+  }
+  .box-perfume__product-name {
+    margin: 2rem 0;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,151 @@
+@use './colors' as colors;
+
+*,
+*::after,
+::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 1.4rem;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	padding: 3rem 2rem;
+	background-color: colors.$cream;
+	max-width: 1200px;
+	width: 100%;
+}
+
+.text {
+	opacity: 0.4;
+	font-size: 1.3rem;
+}
+
+.box-img {
+	width: 100%;
+}
+
+.box-price {
+	display: flex;
+	margin: 2rem 0;
+	align-items: center;
+}
+
+.box-perfume {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 500px;
+	background-color: colors.$white;
+	border-radius: 1rem;
+	overflow: hidden;
+
+	&__img {
+		width: 100%;
+		object-fit: contain;
+
+		&-desktop {
+			display: none;
+		}
+	}
+
+	&__box-perfume-info {
+		padding: 2rem;
+	}
+
+	&__product-category {
+		text-transform: uppercase;
+		letter-spacing: 4px;
+	}
+
+	&__product-name {
+		font-family: 'Fraunces', serif;
+		margin: 1rem 0;
+	}
+
+	&__product-info {
+		line-height: 2.2rem;
+	}
+
+	&__price {
+		margin-right: 2rem;
+		font-size: 2.8rem;
+		font-family: 'Fraunces', serif;
+		color: colors.$dark_cyan;
+		font-weight: 700;
+	}
+
+	&__btn {
+		padding: 1.5rem;
+		width: 100%;
+		background-color: colors.$dark_cyan;
+		color: colors.$white;
+		border-radius: 1rem;
+		border: none;
+		font-weight: bold;
+		cursor: pointer;
+		transition: 0.4s background-color;
+
+		img {
+			position: relative;
+			top: 3px;
+			right: 5px;
+		}
+
+		&:hover {
+			background-color: colors.$ver_dark_cyan;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.wrapper {
+		height: 100vh;
+	}
+
+	.box-perfume {
+		flex-direction: row;
+		max-width: 600px;
+	}
+
+	.box-perfume {
+		&__img {
+			display: none;
+			width: 100%;
+			max-width: 300px;
+			object-fit: cover;
+
+			&-desktop {
+				display: block;
+				width: 100%;
+				object-fit: contain;
+			}
+		}
+
+		&__box-perfume-info {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 100%;
+			max-width: 300px;
+			padding: 3rem;
+		}
+
+		&__product-name {
+			margin: 2rem 0;
+		}
+	}
+}
